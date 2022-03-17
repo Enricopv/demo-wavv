@@ -12,7 +12,6 @@ export default function MuxDemo() {
 }
 
 function MuxVideoPlayer(props: VideoPlayerProps) {
-    
   if (!props.playback_id) {
     return <div> MUX playback_id missing</div>;
   }
