@@ -21,8 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 const Dashboard = (props: { children?: React.ReactNode }) => {
   return (
     <div>
-      <div style={{ display: "flex", flexDirection: "row",
-            backgroundColor: "#001828", }}>
+      <div style={{ display: "flex", flexDirection: "row" }}>
         <div
           style={{
             width: 250,
@@ -54,7 +53,7 @@ const Dashboard = (props: { children?: React.ReactNode }) => {
           <div>MenuItem 2</div>
           <div>MenuItem 3</div>
         </div>
-        <div style={{ width: "100%", backgroundColor: "#001828", padding: "2rem" }}>
+        <div style={{ width: "100%", padding: "2rem" }}>
           <div
             style={{
               color: "white",

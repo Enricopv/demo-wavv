@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div style={{ color: "white", fontSize: "1.5rem" }}>I am the home page</div>
+    <div style={{ color: "black", fontSize: "1.5rem" }}>I am the home page</div>
   );
 };
 

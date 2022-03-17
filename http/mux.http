@@ -1,0 +1,21 @@
+### Create Video
+POST https://api.mux.com/video/v1/assets
+Content-Type: application/json
+Authorization: Basic f2173e63-a4ae-4150-8f33-a330072b4b32:EJtyz0LJLY/qNsgVPvQA9AcvewinLWRLVmthxFa3b50W0G9oBxVxCYYNVN3F/Pc9d7GIyuKvPMK
+
+{
+    "input": "https://muxed.s3.amazonaws.com/leds.mp4",
+    "playback_policy": ["public"]
+}
+
+### Create a playback ID
+
+POST https://api.mux.com/video/v1/assets/4PlGcjyRs6rYMu2FqNLu9145WhQ72L2EXV4AkNUApCg/playback-ids
+Content-Type: application/json
+Authorization: Basic f2173e63-a4ae-4150-8f33-a330072b4b32:EJtyz0LJLY/qNsgVPvQA9AcvewinLWRLVmthxFa3b50W0G9oBxVxCYYNVN3F/Pc9d7GIyuKvPMK
+
+{
+    "policy": "public"
+}
+
+# Test playback_id result: UmnZoO00WhdrjSV5qke02DVI8RO9PZvbzJVdoe247Wy1w

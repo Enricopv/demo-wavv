@@ -2,11 +2,14 @@ import axios from "axios";
 import type { NextPage } from "next";
 import * as React from "react";
 
-export async function getStaticProps() {
-  const data = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=20");
-  await delay(2000);
+export async function getServerSideProps() {
+  const data = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=20"); // * Settings Data
 
-  
+  // * API KEys
+  // * API Secrets
+  // * Database calls
+
+  await delay(2000);
   return {
     props: {
       pokemon: data.data.results,
@@ -16,19 +19,19 @@ export async function getStaticProps() {
 
 const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
-const Static: NextPage = (props: {
+const Home: NextPage = (props: {
   pokemon?: { name: string }[];
   children?: React.ReactNode;
 }) => {
 
 
 
-
+  
   return (
     <div style={{ ...mainStyle, flexDirection: "column" }}>
-      <div style={{ textAlign: "center", marginBottom: 100, fontSize: 32 }}>
-        Static Side
-      </div>
+    <div style={{ textAlign: "center", marginBottom: 100, fontSize: 32 }}>
+      Server Side
+    </div>
       <div style={{ display: "flex", flexDirection: "row" }}>
         {props?.pokemon?.slice(0, 3).map((poke, index) => (
           <div
@@ -53,8 +56,9 @@ const Static: NextPage = (props: {
 const mainStyle = {
   height: "100vh",
   display: "flex",
+  flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
 };
 
-export default Static;
+export default Home;

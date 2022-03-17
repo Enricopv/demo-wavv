@@ -27,6 +27,8 @@ const Home: NextPage = (props: {
 
 
 
+
+  
   return (
     <div style={{ ...mainStyle, flexDirection: "column" }}>
     <div style={{ textAlign: "center", marginBottom: 100, fontSize: 32 }}>
